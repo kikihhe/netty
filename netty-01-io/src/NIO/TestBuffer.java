@@ -23,16 +23,11 @@ public class TestBuffer {
 
         // 将limit = position
         // 将position = 0
-        byteBuffer.clear();
-        byteBuffer.rewind();
-        byteBuffer.compact();
+        byteBuffer.flip();
 
-        System.out.println(byteBuffer.get());
-        System.out.println(byteBuffer.get());
-        System.out.println(byteBuffer.get());
-        System.out.println(byteBuffer.get());
-        System.out.println(byteBuffer.get());
-
+        while (byteBuffer.hasRemaining()) {
+            System.out.println(byteBuffer.get());
+        }
 
 
 
