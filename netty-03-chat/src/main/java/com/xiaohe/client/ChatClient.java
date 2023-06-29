@@ -51,6 +51,8 @@ public class ChatClient {
 
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
+        } finally {
+            eventLoopGroup.shutdownGracefully();
         }
 
     }

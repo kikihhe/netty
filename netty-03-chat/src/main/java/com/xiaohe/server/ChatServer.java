@@ -46,6 +46,9 @@ public class ChatServer {
 
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
+        } finally {
+            bossGroup.shutdownGracefully();
+            workGroup.shutdownGracefully();
         }
 
 
