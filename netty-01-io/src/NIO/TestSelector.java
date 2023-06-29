@@ -54,6 +54,7 @@ public class TestSelector {
                     // 如果选择键写事件就绪
 
                 }
+                iterator.remove();
             }
         }
 
