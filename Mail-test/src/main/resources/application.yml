@@ -1,0 +1,41 @@
+
+server:
+  port: 2999
+  max-http-header-size: 10KB
+
+spring:
+  servlet:
+    # ?????????
+    multipart:
+      enabled: true
+      # ??????
+      #      location: /tmp/tomcat
+      # ????????size
+      max-file-size: 10MB
+      # ????????size
+      max-request-size: 20MB
+  mail:
+    port: 465
+    #smtp ????  qq ???? smtp.qq.com;163 ??? smtp.163.com
+    host: smtp.qq.com
+    # ????
+    protocol: smtp
+    # ???
+    default-encoding: UTF-8
+    # ???????
+    username: 3651593213@qq.com
+    # ???
+    password: ldscgurfqxdtcidb
+    test-connection: true
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+            required: true
+          ssl:
+            enable: true
+          socketFactory:
+            port: 465
+            class: javax.net.ssl.SSLSocketFactory
