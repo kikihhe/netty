@@ -117,7 +117,7 @@ public class DefaultPromise<V> extends AbstractFuture<V> implements Promise<V> {
 
         return this;
     }
-    private void checkDeadLock() {
+    public void checkDeadLock() {
         EventExecutor e = executor();
         if (e != null && e.inEventLoop(Thread.currentThread())) {
             throw new BlockingOperationException(toString());
