@@ -1,6 +1,7 @@
 package org.xiaohe.channel;
 
 import org.xiaohe.channel.id.ChannelId;
+import org.xiaohe.util.loop.EventLoop;
 
 import java.net.SocketAddress;
 

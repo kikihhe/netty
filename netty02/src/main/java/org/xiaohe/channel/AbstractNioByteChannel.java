@@ -17,7 +17,7 @@ public abstract class AbstractNioByteChannel extends AbstractNioChannel {
     }
 
     @Override
-    protected void read() {
+    public void read() {
         ByteBuffer byteBuffer = ByteBuffer.allocate(1024);
         try {
             doReadBytes(byteBuffer);

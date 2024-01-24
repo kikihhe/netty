@@ -4,8 +4,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.xiaohe.channel.id.ChannelId;
 import org.xiaohe.channel.id.DefaultChannelId;
+import org.xiaohe.util.loop.EventLoop;
 
-import javax.management.RuntimeMBeanException;
 import java.net.SocketAddress;
 import java.nio.channels.ClosedChannelException;
 

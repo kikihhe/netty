@@ -1,6 +1,7 @@
 package org.xiaohe.channel;
 
-import org.xiaohe.channel.id.ChannelId;
+import org.xiaohe.util.loop.EventLoop;
+import org.xiaohe.util.loop.NioEventLoop;
 
 import java.io.IOException;
 import java.net.SocketAddress;
@@ -91,7 +92,7 @@ public abstract class AbstractNioChannel extends AbstractChannel {
      * @throws Exception
      */
     @Override
-    protected void doBeginRead() throws Exception {
+    public void doBeginRead() throws Exception {
         final SelectionKey selectionKey = this.selectionKey;
         if (!selectionKey.isValid()) {
             return;
@@ -121,5 +122,5 @@ public abstract class AbstractNioChannel extends AbstractChannel {
     }
 
     protected abstract boolean doConnect(SocketAddress remoteAddress, SocketAddress localAddress) throws Exception;
-    protected abstract void read();
+    public abstract void read();
 }

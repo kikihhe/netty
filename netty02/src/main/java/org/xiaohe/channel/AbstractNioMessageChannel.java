@@ -29,7 +29,7 @@ public abstract class AbstractNioMessageChannel extends AbstractNioChannel {
      * @throws Exception
      */
     @Override
-    protected void doBeginRead() throws Exception {
+    public void doBeginRead() throws Exception {
         if (inputShutdown) {
             return;
         }
@@ -41,7 +41,7 @@ public abstract class AbstractNioMessageChannel extends AbstractNioChannel {
      * 虽然名字叫 read，但是在 ServerSocketChannel 中并不是读取数据，而是创建客户端连接并放进集合中
      */
     @Override
-    protected void read() {
+    public void read() {
         assert eventLoop().inEventLoop(Thread.currentThread());
         boolean closed = false;
         Throwable exception = null;

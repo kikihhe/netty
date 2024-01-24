@@ -1,5 +1,8 @@
-package org.xiaohe.channel;
+package org.xiaohe.util.loop;
 
+import org.xiaohe.channel.Channel;
+import org.xiaohe.channel.ChannelFuture;
+import org.xiaohe.channel.ChannelPromise;
 import org.xiaohe.util.executor.EventExecutorGroup;
 
 /**
@@ -12,5 +15,5 @@ public interface EventLoopGroup extends EventExecutorGroup {
 
     ChannelFuture register(Channel channel);
 
-    ChannelFuture regsiter(ChannelPromise promise);
+    public ChannelFuture register(ChannelPromise promise);
 }

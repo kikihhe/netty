@@ -1,6 +1,7 @@
 package org.xiaohe.channel;
 
 import org.xiaohe.util.internal.SocketUtils;
+import org.xiaohe.util.loop.NioEventLoop;
 
 import java.io.IOException;
 import java.net.SocketAddress;
