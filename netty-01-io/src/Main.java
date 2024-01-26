@@ -1,12 +1,3 @@
-package org.xiaohe;
-
-import java.util.concurrent.FutureTask;
-
-/**
- * @author : 小何
- * @Description :
- * @date : 2024-01-23 19:09
- */
 public class Main {
     private static int i = 0;
     private static Object lock = new Object();
